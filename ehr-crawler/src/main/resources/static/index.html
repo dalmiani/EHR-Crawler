@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHR-Crawler Edge Client</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav id="top-app-bar" class="teal darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <i class="material-icons">medical_services</i> EHR-Crawler Edge
+            </a>
+            <ul class="right">
+                <li>
+                    <a href="#" id="status-indicator">
+                        <span class="status-dot status-dot--offline"></span>
+                        <span id="status-text">Modalità Locale</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="logout-btn" onclick="App.logout()">
+                        <i class="material-icons">logout</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="staleness-banner" class="staleness-banner">
+        <i class="material-icons">warning</i>
+        <span id="staleness-text">CARICAMENTO STATO SINCRONIZZAZIONE...</span>
+    </div>
+
+    <main class="container" id="main-content" style="margin-top: 20px;">
+        <!-- I contenuti dinamici verranno iniettati tramite app.js -->
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

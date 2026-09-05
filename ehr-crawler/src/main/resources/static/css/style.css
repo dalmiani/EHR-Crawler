@@ -1,0 +1,51 @@
+/* Banner dati non aggiornati */
+.staleness-banner {
+    background-color: #ff8f00; /* Material amber 800 */
+    color: #ffffff;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.staleness-banner i {
+    font-size: 18px;
+}
+
+/* Badge Indicatori di Sicurezza */
+.safety-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 4px;
+    color: #ffffff;
+}
+
+.safety-chip--allergy {
+    background-color: #d32f2f; /* Material red 700 */
+}
+
+.safety-chip--code-status {
+    background-color: #f57c00; /* Material orange 700 */
+}
+
+.status-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-dot--offline {
+    background-color: #ff9800;
+}
