@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHR-Crawler Edge Client</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav id="top-app-bar" class="teal darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" style="display: flex; align-items: center; font-size: 1.2rem;">
+                <i class="material-icons left">medical_services</i>
+                <span>EHR-Crawler Edge</span>
+                <span id="user-display-badge" style="font-size: 0.85rem; font-weight: normal; margin-left: 12px; background: rgba(255,255,255,0.2); padding: 2px 10px; border-radius: 12px; display: none;"></span>
+            </a>
+            <ul class="right" style="display: flex; align-items: center;">
+                <li id="nav-audit-item" style="display: none;">
+                    <a href="#" onclick="App.showAuditLogsModal()" style="display: flex; align-items: center; gap: 4px;" title="EHDS Audit Trail">
+                        <i class="material-icons">assignment</i> <span>Audit Log</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="status-indicator">
+                        <span class="status-dot status-dot--offline"></span>
+                        <span id="status-text">Modalità Locale</span>
+                    </a>
+                </li>
+                <li id="nav-logout-item" style="display: none;">
+                    <a href="#" onclick="App.logout()" title="Logout">
+                        <i class="material-icons">logout</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="staleness-banner" class="staleness-banner">
+        <i class="material-icons">warning</i>
+        <span id="staleness-text">CARICAMENTO STATO SINCRONIZZAZIONE...</span>
+    </div>
+
+    <main class="container" id="main-content" style="margin-top: 20px;">
+        <!-- Dynamic content rendered by app.js -->
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
